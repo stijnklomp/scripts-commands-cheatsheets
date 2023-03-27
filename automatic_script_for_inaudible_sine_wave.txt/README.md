@@ -17,10 +17,10 @@ Install pgrep if it is not already installed.
 
  ### `chmod 551 start_stop_sox_silent_since_wave.sh`
 
- Make the script executable
+ Make the script executable.
 
  ## Usage
 
  ### `./start_stop_sox_silent_since_wave.sh`
 
- Start/Stop the sine wave
+ Start/Stop the sine wave.
