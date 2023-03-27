@@ -8,7 +8,7 @@
 
 Make sure your script is executable.
 
-### `sudo ln -s ./startup.sh /etc/init.d/`
+### `sudo ln -s /absolute/path/startup.sh /etc/init.d/`
 
 Next, create a symbolic link to the script file in the `/etc/init.d/`.
 
