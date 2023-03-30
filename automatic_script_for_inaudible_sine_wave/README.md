@@ -2,25 +2,29 @@
 
 ## Prerequisites
 
-### `sudo apt-get install procps`
+Install pgrep if it is not already installed:
+```Bash
+sudo apt-get install procps
+```
 
-Install pgrep if it is not already installed.
+#### If using WSL
 
-##### *If using WSL*
+Install SoX handlers for other audio formats:
+*(This is needed so that the default audio device and driver can be found)*
+```Bash
+sudo apt install libsox-fmt-all
+```
 
-### `sudo apt install libsox-fmt-all`
+## Installation
 
- Install SoX handlers for other audio formats.
- *(This is needed so that the default audio device and driver can be found)*
+Make the script executable:
+```Bash
+chmod 551 start_stop_sox_silent_since_wave.sh
+```
 
- ## Installation
+## Usage
 
- ### `chmod 551 start_stop_sox_silent_since_wave.sh`
-
- Make the script executable.
-
- ## Usage
-
- ### `./start_stop_sox_silent_since_wave.sh`
-
- Start/Stop the sine wave.
+Start/Stop the sine wave:
+```Bash
+./start_stop_sox_silent_since_wave.sh
+```
