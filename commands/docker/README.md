@@ -59,6 +59,13 @@ sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
+##### Install Docker Compose
+
+```Bash
+sudo apt update \
+&& sudo apt install docker-compose-plugin
+```
+
 ##### Manage Docker as a non-root user
 
 1. Create the docker group:
