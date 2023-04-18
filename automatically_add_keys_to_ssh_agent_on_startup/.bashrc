@@ -1,13 +1,3 @@
-# Automatically add keys to SSH agent on startup
-
-## Installation
-
-### Start SSH agent and add keys on startup
-
-Add the following to your `.bashrc` file:
-*(Which in most cases can be found in your home directory `~/.bashrc`)*
-
-```bash
 # --------------------------------
 # Automatically add existing SSH agent or create one if it doesn't exist already
 # and add SSH keys from the SSH config file
@@ -85,24 +75,3 @@ function sshagent_init {
 }
 
 alias sagent="sshagent_init"
-```
-
-Run `sagent` in your terminal to activate the SSH agent.
-
-### Add SSH config
-
-Add the following to your SSH `config` file for every key you wish to automatically load:
-*(Which in most cases can be found in your home directory at `~/.ssh/config`. You can create it yourself if it does not already exist)*
-
-```bash
-Host github
-    HostName github.com
-    IdentityFile /home/user/.ssh/github_private_key
-    User git
-    AddKeysToAgent yes
-```
-
-## Usage
-
-Run `sagent` to create a new SSH agent or reuse an existing one. It will automatically add any keys from your SSH config file to the running SSH agent on first run.
-*(Note that it may ask for a password for every key that requires it)*
