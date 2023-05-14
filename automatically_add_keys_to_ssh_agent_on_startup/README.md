@@ -12,7 +12,6 @@ Add the following to your `.bashrc` file:
 # Automatically add existing SSH agent or create one if it doesn't exist already
 # and add SSH keys from the SSH config file
 # --------------------------------
-
 function sshagent_findsockets {
     find /tmp -uid $(id -u) -type s -name agent.\* 2>/dev/null
 }
