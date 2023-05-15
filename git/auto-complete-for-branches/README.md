@@ -9,7 +9,7 @@ Add the following to your `.bashrc` file:
 # --------------------------------
 # Git auto-complete for branches
 # --------------------------------
-t -f ~/.git-completion.bash && . $_
+test -f ~/.git-completion.bash && . $_
 ```
 
 Add the following in your terminal:
