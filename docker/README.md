@@ -18,7 +18,7 @@ Docker Engine is compatible with `x86_64` (or `amd64`), `armhf`, and `arm64` arc
 
 #### If Docker package already comes with your OS distribution
 
-```Bash
+```bash
 sudo apt-get install docker.io
 ```
 
@@ -28,19 +28,19 @@ Before you install Docker Engine for the first time on a new host machine, you n
 
 ##### Install repo
 1. Update the `apt` package index and install packages to allow `apt` to use a repository over HTTPS:
-```Bash
+```bash
 sudo apt-get update
 sudo apt-get install \ ca-certificates \ curl \ gnupg
 ```
 
 2. Add Docker&#39;s official GPG key:
-```Bash
+```bash
 sudo mkdir -m 0755 -p /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 ```
 
 3. Use the following command to set up the repository:
-```Bash
+```bash
 echo \
          "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
          "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
@@ -50,18 +50,18 @@ echo \
 ##### Install Docker Engine
 
 1. Update the `apt` package index:
-```Bash
+```bash
 sudo apt-get update
 ```
 
 2. Install Docker Engine, containerd, and Docker Compose:
-```Bash
+```bash
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
 ##### Install Docker Compose
 
-```Bash
+```bash
 sudo apt update \
 && sudo apt install docker-compose-plugin
 ```
@@ -69,25 +69,25 @@ sudo apt update \
 ##### Manage Docker as a non-root user
 
 1. Create the docker group:
-```Bash
+```bash
 sudo groupadd docker
 ```
 
 2. Add your user to the docker group:
-```Bash
+```bash
 sudo usermod -aG docker $USER
 ```
 
 3. Log out and log back in so that your group membership is re-evaluated.
 *You can also run the following command to activate the changes to groups:*
-```Bash
+```bash
 newgrp docker
 ```
 
 ##### Configure Docker to start on boot with systemd
 
 On Debian and Ubuntu, the Docker service starts on boot by default. To automatically start Docker and containerd on boot for other Linux distributions using systemd, run the following commands:
-```Bash
+```bash
 sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
 ```
@@ -95,119 +95,119 @@ sudo systemctl enable containerd.service
 ### Uninstall Docker
 
 Uninstall old versions:
-```Bash
+```bash
 sudo apt-get remove docker docker-engine docker.io containerd runc
 ```
 
 Uninstall Docker Engine:
-```Bash
+```bash
 sudo apt-get purge docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin docker-ce-rootless-extras
 ```
 
 ## Usage
 
 Start Docker:
-```Bash
+```bash
 systemctl start docker
 ```
-```Bash
+```bash
 sudo /etc/init.d/docker start
 ```
 
 Stop Docker:
-```Bash
+```bash
 systemctl disable --now docker.service docker.socket
 ```
-```Bash
+```bash
 sudo /etc/init.d/docker stop
 ```
 
 List images:
-```Bash
+```bash
 docker images
 ```
 
 List all images:
-```Bash
+```bash
 docker images -a
 ```
 
 List containers:
-```Bash
+```bash
 docker ps
 ```
 
 List all containers:
-```Bash
+```bash
 docker ps -a
 ```
 
 List total file sizes:
-```Bash
+```bash
 docker ps -s
 ```
 
 Build image from local repo:
-```Bash
+```bash
 docker build -t <tag> .
 ```
 
 Build image from .tar file:
-```Bash
+```bash
 docker load -i <tar-file>
 ```
 
 Create .tar file from image:
-```Bash
+```bash
 docker save -o <tar-file-name>.tar <image>
 ```
 
 Remove image:
-```Bash
+```bash
 docker image rm -f <image>
 ```
 
 Remove all images:
-```Bash
+```bash
 docker rmi -f $(docker images -aq)
 ```
 
 Build and run container:
-```Bash
+```bash
 docker run -dp 3000:3000 <tag>
 ```
 
 Build and run container with name:
-```Bash
+```bash
 docker run --name <name> -dp 3000:3000 <tag>
 ```
 
 Stop running container:
-```Bash
+```bash
 docker stop <container>
 ```
 
 Remove container:
-```Bash
+```bash
 docker rm <container>
 ```
 
 Remove all container:
-```Bash
+```bash
 docker rm -f $(docker ps -aq)
 ```
 
 List all running containers:
-```Bash
+```bash
 docker rmi -f $(docker images -aq)
 ```
 
 Remove all images:
-```Bash
+```bash
 docker rmi -f $(docker images -aq)
 ```
 
 Remove all images:
-```Bash
+```bash
 docker rmi -f $(docker images -aq)
 ```
