@@ -1,11 +1,12 @@
 # Useful Vim commands
 
-### Explore
+### File explorer mode
 
 ##### Open new explore
 ```bash
 :Explore
 :Sexplore
+:Vexplore
 ```
 
 ##### Go to directory
@@ -13,9 +14,19 @@
 :e <directory>
 ```
 
+##### Create new directory
+```bash
+d
+```
+
+##### Create new file
+```bash
+%
+```
+
 ### Tabs
 
-##### Open new tabs
+##### Create new tab
 ```bash
 :tabe <filepath>
 ```
