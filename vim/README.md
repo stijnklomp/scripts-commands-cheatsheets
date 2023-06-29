@@ -50,3 +50,24 @@ d
 :tabmove 1 # Move to the second position
 :tabmove # Move to the last position
 ```
+
+### Search and replace
+
+##### Search
+```bash
+/<pattern>
+```
+`n` to go to next item
+`N` to go to previous item
+
+##### Replace
+```bash
+# In current line
+:s/foo/bar/g
+
+# In all lines
+:%s/foo/bar/g
+
+# Case sensitive
+:%s/foo/bar/gi
+```
