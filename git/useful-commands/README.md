@@ -38,4 +38,29 @@ git stash pop stash@{<number>}
 ##### List stashes
 ```bash
 git stash list
-````
+```
+
+### Resole merge conflicts
+
+##### Accept local version for file
+```bash
+git checkout --ours <file>
+```
+
+##### Accept local version for all conflicting files
+```bash
+git merge --strategy-option ours
+```
+
+##### Accept remote version for file
+```bash
+git checkout --theirs <file>
+```
+
+##### Accept remote version for all conflicting files
+```bash
+git merge --strategy-option theirs
+```
+
+##### Link
+`https://phoenixnap.com/kb/how-to-resolve-merge-conflicts-in-git#ftoc-heading-4`
