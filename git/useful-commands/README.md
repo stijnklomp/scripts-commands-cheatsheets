@@ -11,7 +11,7 @@ git remote update origin --prune
 ##### Remove remote branch
 ```bash
 git push -d <remote> <branch>
-# In most cases, `<remote-name>` will be `origin`
+# In most cases, `<remote>` will be `origin`
 ```
 
 ##### Remove local branch
