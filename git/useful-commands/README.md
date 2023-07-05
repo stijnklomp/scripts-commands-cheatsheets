@@ -35,6 +35,15 @@ git stash push -m "<name>"
 git stash pop stash@{<number>}
 ```
 
+##### Drop a stash
+```bash
+# Drop top stash
+git stash drop
+
+# Drop specified stash
+git stash drop stash@{<number>}
+```
+
 ##### List stashes
 ```bash
 git stash list
