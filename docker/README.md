@@ -33,7 +33,7 @@ sudo apt-get update
 sudo apt-get install \ ca-certificates \ curl \ gnupg
 ```
 
-2. Add Docker&#39;s official GPG key:
+2. Add Docker's official GPG key:
 ```bash
 sudo mkdir -m 0755 -p /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg

@@ -23,6 +23,18 @@ git branch -d <branch>
 git branch -D <branch>
 ```
 
+### Changes
+
+##### Revert changes to modified files
+```bash
+git reset --hard
+```
+
+##### Remove all untracked files and directories
+```bash
+git clean -fd
+```
+
 ### Stash
 
 ##### Create named stash
@@ -38,6 +50,16 @@ git stash pop stash@{<number>}
 ##### List stashes
 ```bash
 git stash list
+```
+
+##### Remove all stashes
+```bash
+git stash clear
+```
+
+##### Remove single stash
+```bash
+git stash drop stash@{<number>}
 ```
 
 ### Resole merge conflicts
