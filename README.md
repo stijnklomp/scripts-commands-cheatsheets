@@ -1,4 +1,4 @@
-# Personal scripts and commands
+# Scripts and commands
 
 <p float="left">
 
@@ -8,4 +8,4 @@
 
 </p>
 
-This is where I store useful scripts and commands that I personally use to create my perfect environment
+This is where I store scripts and commands that I often use.

@@ -11,7 +11,7 @@ git remote update origin --prune
 ##### Remove remote branch
 ```bash
 git push -d <remote> <branch>
-# In most cases, `<remote-name>` will be `origin`
+# In most cases, `<remote>` will be `origin`
 ```
 
 ##### Remove local branch
@@ -21,6 +21,18 @@ git branch -d <branch>
 
 # Force delete
 git branch -D <branch>
+```
+
+### Changes
+
+##### Revert changes to modified files
+```bash
+git reset --hard
+```
+
+##### Remove all untracked files and directories
+```bash
+git clean -fd
 ```
 
 ### Stash
@@ -47,6 +59,16 @@ git stash drop stash@{<number>}
 ##### List stashes
 ```bash
 git stash list
+```
+
+##### Remove all stashes
+```bash
+git stash clear
+```
+
+##### Remove single stash
+```bash
+git stash drop stash@{<number>}
 ```
 
 ### Resole merge conflicts
