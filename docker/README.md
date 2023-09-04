@@ -211,3 +211,8 @@ Remove all images:
 ```bash
 docker rmi -f $(docker images -aq)
 ```
+
+List ports of all containers:
+```bash
+docker container ls --format "table {{.ID}}\t{{.Names}}\t{{.Ports}}" -a
+```
