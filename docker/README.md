@@ -202,16 +202,6 @@ List all running containers:
 docker rmi -f $(docker images -aq)
 ```
 
-Remove all images:
-```bash
-docker rmi -f $(docker images -aq)
-```
-
-Remove all images:
-```bash
-docker rmi -f $(docker images -aq)
-```
-
 List ports of all containers:
 ```bash
 docker container ls --format "table {{.ID}}\t{{.Names}}\t{{.Ports}}" -a
