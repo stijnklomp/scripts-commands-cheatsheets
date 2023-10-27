@@ -48,3 +48,10 @@ npm tag <package>@<version> <tag> # `--remove` to remove the tag
 ```bash
 npm dist-tag ls <package> # <package> can be left empty for current package
 ```
+
+## npm-check-updates
+
+##### Update all dependencies to latest versions
+```bash
+ncu -u
+```
