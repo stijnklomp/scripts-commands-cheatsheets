@@ -206,3 +206,8 @@ List ports of all containers:
 ```bash
 docker container ls --format "table {{.ID}}\t{{.Names}}\t{{.Ports}}" -a
 ```
+
+Shell into running container:
+```bash
+docker exec -ti <container name> /bin/bash
+```
