@@ -35,6 +35,11 @@ git reset --hard
 git clean -fd
 ```
 
+##### Show only changed files from commit
+```bash
+git diff-tree --no-commit-id --name-only <commit hash> -r
+```
+
 ### Stash
 
 ##### Create named stash
