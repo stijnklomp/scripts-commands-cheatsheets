@@ -1,4 +1,4 @@
-# Scripts and commands
+# Scripts, commands and cheatsheets
 
 <p float="left">
 
@@ -8,4 +8,4 @@
 
 </p>
 
-This is where I store scripts and commands that I often use.
+This is where I store scripts, commands and cheatsheets that I often use.
