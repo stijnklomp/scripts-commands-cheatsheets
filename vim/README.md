@@ -70,4 +70,7 @@ d
 
 # Case sensitive
 :%s/foo/bar/gi
+
+# In highlighted text
+:'<,'>s/foo/bar/g
 ```

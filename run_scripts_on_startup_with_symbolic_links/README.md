@@ -1,4 +1,4 @@
-utomatically add keys to SSH agent on startup
+# Run scripts on startup
 
 ## Installation
 
