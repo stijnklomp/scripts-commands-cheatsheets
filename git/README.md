@@ -4,18 +4,18 @@
 
 ##### Update remote-tracking branches and remove deleted branches
 
-```bash
+```sh
 git remote update origin --prune
 ```
 
 ##### Remove remote branch
-```bash
+```sh
 git push -d <remote> <branch>
 # In most cases, `<remote>` will be `origin`
 ```
 
 ##### Remove local branch
-```bash
+```sh
 # Only delete branch if it has already been fully merged in its upstream branch
 git branch -d <branch>
 
@@ -26,39 +26,39 @@ git branch -D <branch>
 ### Changes
 
 ##### Revert changes to modified files
-```bash
+```sh
 git reset --hard
 ```
 
 ##### Remove all untracked files and directories
-```bash
+```sh
 git clean -fd
 ```
 
 ##### Show only changed files from commit
-```bash
+```sh
 git diff-tree --no-commit-id --name-only <commit hash> -r
 ```
 
 ### Stash
 
 ##### Stash single file
-```bash
+```sh
 git stash -- <file name>
 ```
 
 ##### Create named stash
-```bash
+```sh
 git stash push -m "<name>"
 ```
 
 ##### Apply and drop a stash
-```bash
+```sh
 git stash pop stash@{<number>}
 ```
 
 ##### Drop a stash
-```bash
+```sh
 # Drop top stash
 git stash drop
 
@@ -67,40 +67,54 @@ git stash drop stash@{<number>}
 ```
 
 ##### List stashes
-```bash
+```sh
 git stash list
 ```
 
 ##### Remove all stashes
-```bash
+```sh
 git stash clear
 ```
 
 ##### Remove single stash
-```bash
+```sh
 git stash drop stash@{<number>}
 ```
 
 ### Resole merge conflicts
 
 ##### Accept local version for file
-```bash
+```sh
 git checkout --ours <file>
 ```
 
 ##### Accept local version for all conflicting files
-```bash
+```sh
 git merge --strategy-option ours
 ```
 
 ##### Accept remote version for file
-```bash
+```sh
 git checkout --theirs <file>
 ```
 
 ##### Accept remote version for all conflicting files
-```bash
+```sh
 git merge --strategy-option theirs
+```
+
+### Merge
+
+##### Accept all incoming changes
+```sh
+git rebase -X theirs <branch>
+```
+
+### Rebase
+
+##### Accept all incoming changes
+```sh
+git rebase -X ours <branch>
 ```
 
 ##### Link
