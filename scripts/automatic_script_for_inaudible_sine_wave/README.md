@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-Install pgrep if it is not already installed:
+Install procps if it is not already installed:
 ```Bash
 sudo apt-get install procps
 ```
