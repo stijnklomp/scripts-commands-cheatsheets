@@ -110,7 +110,13 @@ docker exec -ti <container name> /bin/bash
 
 ## Extra
 
-Install cURL into Alpine container
+Install cURL into:
+Ubuntu:
 ```sh
-apk --no-cache add curl
+apt update && apt upgrade -y upgrade && apt -y install curl
+```
+
+Alpine container:
+```sh
+apk update && apk upgrade --no-cache && apk --no-cache add curl
 ```
