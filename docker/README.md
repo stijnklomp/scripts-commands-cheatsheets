@@ -3,108 +3,108 @@
 ## Usage
 
 Start Docker:
-```bash
+```sh
 systemctl start docker
 ```
-```bash
+```sh
 sudo /etc/init.d/docker start
 ```
 
 Stop Docker:
-```bash
+```sh
 systemctl disable --now docker.service docker.socket
 ```
-```bash
+```sh
 sudo /etc/init.d/docker stop
 ```
 
 List images:
-```bash
+```sh
 docker images
 ```
 
 List all images:
-```bash
+```sh
 docker images -a
 ```
 
 List containers:
-```bash
+```sh
 docker ps
 ```
 
 List all containers:
-```bash
+```sh
 docker ps -a
 ```
 
 List total file sizes:
-```bash
+```sh
 docker ps -s
 ```
 
 Build image from local repo:
-```bash
+```sh
 docker build -t <tag> .
 ```
 
 Build image from .tar file:
-```bash
+```sh
 docker load -i <tar-file>
 ```
 
 Create .tar file from image:
-```bash
+```sh
 docker save -o <tar-file-name>.tar <image>
 ```
 
 Remove image:
-```bash
+```sh
 docker image rm -f <image>
 ```
 
 Remove all images:
-```bash
+```sh
 docker rmi -f $(docker images -aq)
 ```
 
 Build and run container:
-```bash
+```sh
 docker run -dp 3000:3000 <tag>
 ```
 
 Build and run container with name:
-```bash
+```sh
 docker run --name <name> -dp 3000:3000 <tag>
 ```
 
 Stop running container:
-```bash
+```sh
 docker stop <container>
 ```
 
 Remove container:
-```bash
+```sh
 docker rm <container>
 ```
 
 Remove all container:
-```bash
+```sh
 docker rm -f $(docker ps -aq)
 ```
 
 List all running containers:
-```bash
+```sh
 docker rmi -f $(docker images -aq)
 ```
 
 List ports of all containers:
-```bash
+```sh
 docker container ls --format "table {{.ID}}\t{{.Names}}\t{{.Ports}}" -a
 ```
 
 Shell into running container:
-```bash
+```sh
 docker exec -ti <container name> /bin/bash
 ```
 
