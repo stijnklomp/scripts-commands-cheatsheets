@@ -58,16 +58,6 @@ Create .tar file from image:
 docker save -o <tar-file-name>.tar <image>
 ```
 
-Remove image:
-```sh
-docker image rm -f <image>
-```
-
-Remove all images:
-```sh
-docker rmi -f $(docker images -aq)
-```
-
 Build and run container:
 ```sh
 docker run -dp 3000:3000 <tag>
@@ -83,16 +73,6 @@ Stop running container:
 docker stop <container>
 ```
 
-Remove container:
-```sh
-docker rm <container>
-```
-
-Remove all container:
-```sh
-docker rm -f $(docker ps -aq)
-```
-
 List all running containers:
 ```sh
 docker rmi -f $(docker images -aq)
@@ -106,6 +86,33 @@ docker container ls --format "table {{.ID}}\t{{.Names}}\t{{.Ports}}" -a
 Shell into running container:
 ```sh
 docker exec -ti <container name> /bin/bash
+```
+
+## Remove commands
+
+Remove container:
+```sh
+docker rm <container>
+```
+
+Remove all container:
+```sh
+docker rm -f $(docker ps -aq)
+```
+
+Remove all volumes and unused data:
+```
+docker system prune --all --force && docker system prune --volumes —force
+```
+
+Remove image:
+```sh
+docker image rm -f <image>
+```
+
+Remove all images:
+```sh
+docker rmi -f $(docker images -aq)
 ```
 
 ## Extra
