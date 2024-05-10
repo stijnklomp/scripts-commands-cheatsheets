@@ -5,5 +5,7 @@
 https://docs.aws.amazon.com/cli/latest/userguide/sso-configure-profile-token.html
 
 ```sh
-aws sso login --profile PROFILE
+aws sso login --profile <profile>
+
+export AWS_PROFILE=<profile>
 ```
