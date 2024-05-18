@@ -123,7 +123,7 @@ Ubuntu:
 apt update && apt upgrade -y upgrade && apt -y install curl
 ```
 
-Alpine container:
+Alpine:
 ```sh
 apk update && apk upgrade --no-cache && apk --no-cache add curl
 ```
