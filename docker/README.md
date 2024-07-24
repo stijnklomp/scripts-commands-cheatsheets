@@ -117,8 +117,8 @@ docker rmi -f $(docker images -aq)
 
 ## Extra
 
-Install cURL into:
-Ubuntu:
+Install cURL:
+Debian:
 ```sh
 apt update && apt upgrade -y upgrade && apt -y install curl
 ```
@@ -126,4 +126,10 @@ apt update && apt upgrade -y upgrade && apt -y install curl
 Alpine:
 ```sh
 apk update && apk upgrade --no-cache && apk --no-cache add curl
+```
+
+Install ps&top:
+Debian:
+```sh
+apt update && apt install -y procps
 ```
