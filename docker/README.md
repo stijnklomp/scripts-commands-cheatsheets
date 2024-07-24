@@ -95,7 +95,7 @@ Remove container:
 docker rm <container>
 ```
 
-Remove all container:
+Remove all containers:
 ```sh
 docker rm -f $(docker ps -aq)
 ```
