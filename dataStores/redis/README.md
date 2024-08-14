@@ -1,7 +1,15 @@
 # Useful commands
 
-## Non production
-### Printing the data of a key
+## Show all keys
+```sh
+# Production
+SCAN 0 MATCH "SOURCE-*" COUNT 1000 TYPE hash
+
+# Non-production
+KEYS *
+```
+
+## Printing the data of a key
 ```sh
 type <key> # Print type
 
@@ -13,7 +21,7 @@ type <key> # Print type
 -> "zset"   : zrange <key> 0 -1 withscores
 ```
 
-### Removing data
+## Removing data
 ```sh
 # Remove all data
 redis-cli flushall
