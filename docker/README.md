@@ -115,6 +115,13 @@ Remove all images:
 docker rmi -f $(docker images -aq)
 ```
 
+## Temp containers
+
+Alpine:
+```sh
+docker run --rm -ti -v ${pwd}:/src alpine sh -c 'cd /src && sh'
+```
+
 ## Extra
 
 Install cURL:
