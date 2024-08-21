@@ -119,7 +119,7 @@ docker rmi -f $(docker images -aq)
 
 Alpine:
 ```sh
-docker run --rm -ti -v ${pwd}:/src alpine sh -c 'cd /src && sh'
+docker run --rm -ti -v $(pwd):/src alpine sh -c 'apt-get update && apt-get install man-db ; sh'
 ```
 
 ## Extra
