@@ -2,13 +2,18 @@
 
 ## Kind
 
-### Run
+### Create
 
 ```sh
-# Run a local Kubernetes cluster
+# Create a local Kubernetes cluster
 kind create cluster --name <clusterName>
 ```
 
+### Delete
+
+```sh
+kind delete cluster
+```
 ### Details
 
 ```sh
@@ -27,8 +32,10 @@ kubectl config use-context <contextName>
 # Create a namespace
 kubectl create namespace <namespaceName>
 
+# Set context values
+kubectl config set-context <contextName> --cluster kind-<clusterName> --namespace <namespaceName>
+
 # Switch to namespaced context
-kubectl config set-context <contextName> --namespace <namespaceName>
 ```
 
 ### Details
@@ -40,4 +47,7 @@ kubectl get pods --all-namespaces
 
 ```sh
 kubectl delete --all pods --namespace=<namespaceName>
+
+# Delete pods in all namespaces
+kubectl delete --all pods --all-namespaces
 ```
