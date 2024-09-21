@@ -24,5 +24,5 @@ dpkg -L <package-name>
 curl -LO <link-to-tar>
 
 # Install
-sudo tar xvzf <tar> -C /usr/local/bin/ tkn
+sudo tar -xvzf <tar> -C /usr/local/bin/
 ```
