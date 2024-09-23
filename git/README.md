@@ -107,7 +107,7 @@ git merge --strategy-option theirs
 
 ##### Accept all incoming changes
 ```sh
-git rebase -X theirs <branch>
+git merge -X theirs <branch>
 ```
 
 ### Rebase
