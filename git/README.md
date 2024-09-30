@@ -47,9 +47,14 @@ git diff-tree --no-commit-id --name-only <commit hash> -r
 git stash -- <file name>
 ```
 
+#### Stash specific file(s)
+```sh
+git stash push -m <name> <file[example/*]>
+```
+
 ##### Create named stash
 ```sh
-git stash push -m "<name>"
+git stash push -m <name>
 ```
 
 ##### Apply and drop a stash
