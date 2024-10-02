@@ -33,19 +33,25 @@ kubectl config use-context <context>
 kubectl create namespace <namespace>
 
 # Set context values
-kubectl config set-context <context> --cluster kind-<cluster> -n <namespace>
+kubectl config set-context <context> --cluster kind-<cluster> --namespace <namespace>
 
 # Switch to namespaced context
-kubectl config set-context --current -n <namespace>
+kubectl config set-context --current --namespace <namespace>
 ```
 
 ### Details
 ```sh
-# All pods in all namespaces
-kubectl get pods --all-namespaces
+# Contexts
+kubectl config get-contexts
 
 # Current cluster
 kubectl config view --minify -ojson | jq ".contexts[0].name"
+
+# All namespaces
+kubectl get namespaces
+
+# All pods in all namespaces
+kubectl get pods --all-namespaces
 ```
 
 ### Delete
