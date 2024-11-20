@@ -42,6 +42,11 @@ git diff-tree --no-commit-id --name-only <commit hash> -r
 
 ### Stash
 
+#### Stash all unstaged files
+```sh
+git stash push --keep-index
+```
+
 ##### Stash single file
 ```sh
 git stash -- <file name>
