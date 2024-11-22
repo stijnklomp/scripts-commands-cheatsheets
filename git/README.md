@@ -129,3 +129,15 @@ git rebase -X ours <branch>
 
 ##### Link
 `https://phoenixnap.com/kb/how-to-resolve-merge-conflicts-in-git#ftoc-heading-4`
+
+### Tag
+
+#### Annotated tags
+```sh
+git tag -a v1.0.0 -m "1.0.0"
+```
+
+#### Show tag
+```sh
+git show v1.0.0
+```
