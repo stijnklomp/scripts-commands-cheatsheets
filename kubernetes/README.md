@@ -41,6 +41,9 @@ kubectl config set-context --current --namespace <namespace>
 
 ### Details
 ```sh
+# View kube-config
+kubectl config view
+
 # Contexts
 kubectl config get-contexts
 
