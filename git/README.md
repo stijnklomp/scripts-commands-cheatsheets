@@ -133,6 +133,13 @@ git merge -X theirs <branch>
 git rebase -X ours <branch>
 ```
 
+## Delete
+
+##### Delete last commit
+```sh
+git reset --hard HEAD^
+```
+
 ##### Link
 `https://phoenixnap.com/kb/how-to-resolve-merge-conflicts-in-git#ftoc-heading-4`
 
