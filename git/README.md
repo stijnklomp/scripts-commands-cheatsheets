@@ -133,6 +133,11 @@ git merge -X theirs <branch>
 git rebase -X ours <branch>
 ```
 
+##### Interactive rebase for last two commits
+```sh
+git rebase -ir HEAD~2
+```
+
 ## Delete
 
 ##### Delete last commit
