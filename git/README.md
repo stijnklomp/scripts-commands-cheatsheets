@@ -1,9 +1,15 @@
 # Useful commands
 
-### Branches
+## Info
+
+##### See last two commits
+```sh
+git log HEAD~2..HEAD
+```
+
+## Branches
 
 ##### Update remote-tracking branches and remove deleted branches
-
 ```sh
 git remote update origin --prune
 ```
@@ -23,7 +29,7 @@ git branch -d <branch>
 git branch -D <branch>
 ```
 
-### Changes
+## Changes
 
 ##### Revert changes to modified files
 ```sh
@@ -40,7 +46,7 @@ git clean -fd
 git diff-tree --no-commit-id --name-only <commit hash> -r
 ```
 
-### Stash
+## Stash
 
 #### Stash all unstaged files
 ```sh
@@ -91,7 +97,7 @@ git stash clear
 git stash drop stash@{<number>}
 ```
 
-### Resole merge conflicts
+## Resole merge conflicts
 
 ##### Accept local version for file
 ```sh
@@ -113,14 +119,14 @@ git checkout --theirs <file>
 git merge --strategy-option theirs
 ```
 
-### Merge
+## Merge
 
 ##### Accept all incoming changes
 ```sh
 git merge -X theirs <branch>
 ```
 
-### Rebase
+## Rebase
 
 ##### Accept all incoming changes
 ```sh
@@ -130,7 +136,7 @@ git rebase -X ours <branch>
 ##### Link
 `https://phoenixnap.com/kb/how-to-resolve-merge-conflicts-in-git#ftoc-heading-4`
 
-### Tag
+## Tag
 
 #### Annotated tags
 ```sh
