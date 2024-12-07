@@ -6,7 +6,7 @@
 
 ```sh
 # Create a local Kubernetes cluster
-kind create cluster --name <cluster>
+kind create cluster -n <cluster name>
 ```
 
 ### Delete
