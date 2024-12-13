@@ -119,14 +119,14 @@ git checkout --theirs <file>
 git merge --strategy-option theirs
 ```
 
-## Merge
+### Merge
 
 ##### Accept all incoming changes
 ```sh
 git merge -X theirs <branch>
 ```
 
-## Rebase
+### Rebase
 
 ##### Accept all incoming changes
 ```sh
