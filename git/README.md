@@ -159,3 +159,8 @@ git tag -a v1.0.0 -m "1.0.0"
 ```sh
 git show v1.0.0
 ```
+
+## Settings
+
+### Global ignore
+Add your desired ignore files/directories to `~/.config/git/ignore`
