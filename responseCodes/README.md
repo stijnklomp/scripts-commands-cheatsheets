@@ -28,6 +28,7 @@
 - 409 Conflict: Request conflicts with the current state on the server.
 - 413 Payload Too Large: Request body is too large to process. 
 - 414 URI Too Long: The request URI is too long.
+- 429 Too many requests: The rate limit has been reached.
 
 ### 5xx: Server Errors
 
