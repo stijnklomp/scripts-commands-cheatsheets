@@ -1,5 +1,14 @@
 # Multiple persistent SSH agents
 
+## Prerequisites
+
+- Python
+If you use Python3 then you can link `python` to `python3` with:
+
+```sh
+sudo ln -s /usr/bin/python3 /usr/bin/python
+```
+
 ## Docs
 
 https://github.com/ccontavalli/ssh-ident
