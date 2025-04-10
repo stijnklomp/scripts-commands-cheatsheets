@@ -18,6 +18,7 @@ https://github.com/ccontavalli/ssh-ident
 MATCH_PATH = [
 #   (directory pattern, identity)
     (r"personal", "personal"),
+    (r".config/", "personal"),
     (r"work", "work"),
 ]
 
