@@ -126,6 +126,11 @@ git merge --strategy-option theirs
 git merge -X theirs <branch>
 ```
 
+##### Squash merge
+```sh
+git merge --squash <branch>
+```
+
 ### Rebase
 
 ##### Accept all incoming changes
