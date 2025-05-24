@@ -18,6 +18,8 @@ systemctl disable --now docker.service docker.socket
 sudo /etc/init.d/docker stop
 ```
 
+## Images
+
 List images:
 ```sh
 docker images
@@ -26,21 +28,6 @@ docker images
 List all images:
 ```sh
 docker images -a
-```
-
-List containers:
-```sh
-docker ps
-```
-
-List all containers:
-```sh
-docker ps -a
-```
-
-List total file sizes:
-```sh
-docker ps -s
 ```
 
 Build image from local repo:
@@ -58,6 +45,23 @@ Create .tar file from image:
 docker save -o <tar-file-name>.tar <image>
 ```
 
+## Containers
+
+List containers:
+```sh
+docker ps
+```
+
+List all containers:
+```sh
+docker ps -a
+```
+
+List total file sizes:
+```sh
+docker ps -s
+```
+
 Build and run container:
 ```sh
 docker run -dp 3000:3000 <tag>
@@ -73,9 +77,9 @@ Stop running container:
 docker stop <container>
 ```
 
-List all running containers:
+Stop all containers:
 ```sh
-docker rmi -f $(docker images -aq)
+docker stop $(docker ps -aq)
 ```
 
 List ports of all containers:
@@ -86,9 +90,20 @@ docker container ls --format "table {{.ID}}\t{{.Names}}\t{{.Ports}}" -a
 Shell into running container:
 ```sh
 docker exec -ti <container name> /bin/bash
+docker exec -ti <container name> /sh
 ```
 
 ## Remove commands
+
+Remove image:
+```sh
+docker image rm -f <image>
+```
+
+Remove all images:
+```sh
+docker rmi -f $(docker images -aq)
+```
 
 Remove container:
 ```sh
@@ -103,16 +118,6 @@ docker rm -f $(docker ps -aq)
 Remove all volumes and unused data:
 ```
 docker system prune --all --force && docker system prune --volumes —force
-```
-
-Remove image:
-```sh
-docker image rm -f <image>
-```
-
-Remove all images:
-```sh
-docker rmi -f $(docker images -aq)
 ```
 
 ## Temp containers
