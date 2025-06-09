@@ -3,7 +3,7 @@
 ## Show all keys
 ```sh
 # Production
-SCAN 0 MATCH "SOURCE-*" COUNT 1000 TYPE hash
+SCAN 0 MATCH "SOURCE-*" COUNT 1000
 
 # Non-production
 KEYS *
