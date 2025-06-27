@@ -25,4 +25,13 @@ curl -LO <link-to-tar>
 
 # Install
 sudo tar -xvzf <tar> -C /usr/local/bin/
+
+# Unfold
+sudo tar -xzf file.tar.gz
+```
+
+## Zip
+
+```sh
+unzip file.zip
 ```
