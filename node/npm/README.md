@@ -1,42 +1,42 @@
 # Useful commands
 
-### Publish a package
-```bash
+# Publish a package
+```sh
 npm publish # `--tag <tag>` to add a tag
 ```
 
-### Linking modules
+# Linking modules
 
-##### Symlink a package
-```bash
+## Symlink a package
+```sh
 npm link
 ```
 
-##### Link and install a linked package
-```bash
+## Link and install a linked package
+```sh
 npm link <package name from package.json>
 ```
 Note that it will put the package under the version of Node that the package uses
 
-##### Unlink a package
-```bash
+## Unlink a package
+```sh
 npm unlink <package>
 ```
 
-##### List modules
-```bash
+# List modules
+```sh
 npm ls
 ```
 
-##### List all globally linked modules
-```bash
+## List all globally linked modules
+```sh
 npm ls -g --depth=0 --link=true
 ```
 
-### Tags
+# Tags
 
-##### Tag package
-```bash
+## Tag package
+```sh
 # Add tag to current package
 npm tag <tag> # `--remove` to remove the tag
 
@@ -44,14 +44,21 @@ npm tag <tag> # `--remove` to remove the tag
 npm tag <package>@<version> <tag> # `--remove` to remove the tag
 ```
 
-##### List all associated tags with package
-```bash
+## List all associated tags with package
+```sh
 npm dist-tag ls <package> # <package> can be left empty for current package
 ```
 
-## npm-check-updates
+# npm-check-updates
 
-##### Update all dependencies to latest versions
-```bash
+## Update all dependencies to latest versions
+```sh
 ncu -u
+```
+
+# Version update 
+```sh
+npm version major `--no-git-tag-version`
+npm version minor `--no-git-tag-version`
+npm version patch `--no-git-tag-version`
 ```
