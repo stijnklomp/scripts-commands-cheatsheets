@@ -14,6 +14,11 @@ git log HEAD~2..HEAD
 git rm -r --cached <dir/file>
 ```
 
+### Placeholder file
+```sh
+git update-index --assume-unchanged <file> # Untrack changes
+git update-index --no-assume-unchanged <file> # Re-track changes
+```
 
 ## Branches
 
