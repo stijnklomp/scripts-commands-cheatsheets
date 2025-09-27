@@ -14,6 +14,11 @@ git log HEAD~2..HEAD
 git rm -r --cached <dir/file>
 ```
 
+### Keep file in repo but freeze future changes
+```sh
+git update-index --assume-unchanged <file>
+```
+
 ### Placeholder file
 ```sh
 git update-index --assume-unchanged <file> # Untrack changes
