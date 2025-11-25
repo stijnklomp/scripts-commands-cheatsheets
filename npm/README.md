@@ -1,6 +1,6 @@
 # NPM
 
-## Version change
+## Version update for your own package
 
 ```sh
 npm version major
@@ -11,4 +11,13 @@ npm version prepatch # 1.2.3 → 1.2.4-0
 npm version preminor # 1.2.3 → 1.3.0-0
 npm version premajor # 1.2.3 → 2.0.0-0
 npm version prerelease # 1.2.3-0 → 1.2.3-1
+```
+
+## Version update for dependency
+
+```sh
+npm update <dependency> # Respects SEMVER
+
+npm install <dependency>@<version>
+pnpm/yarn add <dependency>@<version>
 ```
