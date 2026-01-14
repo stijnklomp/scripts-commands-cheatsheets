@@ -21,3 +21,14 @@ npm update <dependency> # Respects SEMVER
 npm install <dependency>@<version>
 pnpm/yarn add <dependency>@<version>
 ```
+
+## Before
+
+You can add the following to an `.npmrc` file to ensure that no modules from
+after this date are downloaded:
+
+```
+before=$(date -v-14d '+%Y-%m-%d')
+```
+
+To ignore this for an `npm i` command, add the `--before=null` flag.
