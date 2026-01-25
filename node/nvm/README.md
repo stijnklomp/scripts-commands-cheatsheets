@@ -25,3 +25,7 @@ Set default version:
 ```bash
 nvm alias default <version>
 ```
+
+```fish
+set -Ux nvm_default_version <version>
+```
