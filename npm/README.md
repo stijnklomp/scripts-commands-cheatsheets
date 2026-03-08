@@ -1,5 +1,11 @@
 # NPM
 
+## Dependency information
+
+```sh
+npm ls <dependency>
+```
+
 ## Version update for your own package
 
 ```sh
@@ -20,6 +26,12 @@ npm update <dependency> # Respects SEMVER
 
 npm install <dependency>@<version>
 pnpm/yarn add <dependency>@<version>
+```
+
+## Update all dependencies to latest version
+
+```sh
+ncu -u
 ```
 
 ## Before
