@@ -9,9 +9,14 @@ git log HEAD~2..HEAD
 
 ## Gitignore
 
-### Remove staged file/directory that has been to gitignore
+### Remove staged file/directory that has been added to gitignore
 ```sh
 git rm -r --cached <dir/file>
+```
+
+### No longer stage file that has been added to gitignore
+```sh
+git update-index --skip-worktree .devcontainer/devcontainer.json
 ```
 
 ### Keep file in repo but freeze future changes
