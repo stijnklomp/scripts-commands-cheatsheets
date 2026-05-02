@@ -16,7 +16,7 @@ git rm -r --cached <dir/file>
 
 ### No longer stage file that has been added to gitignore
 ```sh
-git update-index --skip-worktree .devcontainer/devcontainer.json
+git update-index --skip-worktree <file>
 ```
 
 ### Keep file in repo but freeze future changes
