@@ -69,6 +69,13 @@ git clean -fd
 git diff-tree --no-commit-id --name-only <commit hash> -r
 ```
 
+## Commit
+
+### Ignore hooks
+```sh
+git commit --no-verify
+```
+
 ## Stash
 
 ### Stash all unstaged files
