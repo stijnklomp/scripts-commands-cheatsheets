@@ -1,0 +1,17 @@
+Host *
+    IdentitiesOnly yes
+
+Match host *gitlab* exec "pwd | grep -q 'developer/work/'"
+    IdentityFile ~/.ssh/identities/work/ssh1-gitlab
+    User sklomp
+    AddKeysToAgent 14h
+
+#Host gitlab.com
+#    IdentityFile ~/.ssh/identities/personal/ssh1-github
+#    User git
+#    AddKeysToAgent 14h
+
+Host github.com
+    IdentityFile ~/.ssh/identities/personal/ssh1-github
+    User git
+    AddKeysToAgent 14h
