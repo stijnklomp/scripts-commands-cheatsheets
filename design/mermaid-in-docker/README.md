@@ -10,18 +10,18 @@ A lightweight shell wrapper to run the Mermaid CLI ("minlag/mermaid-cli") in Doc
 
 1. Make the script executable:
 ```bash
-chmod +x run-mermaid.sh
+chmod +x script.sh
 ```
 
 2. Generate a diagram:
 ```bash
-./run-mermaid.sh -i diagram.md -o diagram.svg
+./script.sh -i diagram.md -o diagram.svg
 ```
 
 ## Usage
 
 ```bash
-./run-mermaid.sh [-v|--version <tag>] [mermaid-cli-flags]
+./script.sh [-v|--version <tag>] [mermaid-cli-flags]
 ```
 
 ### Options
@@ -34,10 +34,10 @@ chmod +x run-mermaid.sh
 
 **Standard conversion to PNG:**
 ```bash
-./run-mermaid.sh -i architecture.mmd -o architecture.png
+./script.sh -i architecture.mmd -o architecture.png
 ```
 
 **Pin to a specific Mermaid version with a dark theme:**
 ```bash
-./run-mermaid.sh --version 10.9.0 -i architecture.mmd -o architecture.svg -t dark
+./script.sh --version 10.9.0 -i architecture.mmd -o architecture.svg -t dark
 ```
